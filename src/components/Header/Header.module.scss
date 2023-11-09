@@ -1,0 +1,29 @@
+header {
+  box-shadow: 0 0.2rem 0.4rem #ddd;
+}
+.header_container {
+  padding: 5px 24px;
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  height: 100%;
+
+  &__logo {
+    height: 50px;
+  }
+
+  &__hamburger_menu {
+    color: #666;
+    margin: auto 0;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header_container {
+    &__hamburger_menu {
+      display: none;
+    }
+  }
+}

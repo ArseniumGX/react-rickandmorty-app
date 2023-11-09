@@ -1,0 +1,47 @@
+@import '../../styles/variables';
+
+.menu_container {
+  display: none;
+  background-color: inherit;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  height: 90vh;
+  width: 100%;
+
+  &__menu_items {
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 2rem;
+    align-items: center;
+    padding: 50px 0;
+
+    &__item {
+      font-family: $font-navigation;
+      font-size: 1.5rem;
+      color: #000;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .menu_container {
+    display: block;
+    position: static;
+    height: auto;
+    width: auto;
+
+    &__menu_items {
+      height: 100%;
+      padding: 0;
+      flex-direction: row;
+      column-gap: 24px;
+      justify-content: center;
+      align-items: center;
+
+      &__item {
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
