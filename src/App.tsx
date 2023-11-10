@@ -1,12 +1,14 @@
-import { Fragment } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { Router } from './Router.tsx';
 import { Footer, Header } from './components';
 
 function App() {
   return (
-    <Fragment>
+    <BrowserRouter>
       <Header />
+      <Router />
       <Footer />
-    </Fragment>
+    </BrowserRouter>
   );
 }
 
