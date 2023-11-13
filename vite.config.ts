@@ -8,7 +8,8 @@ export default defineConfig({
   resolve: {
     alias: {
       components: resolve(__dirname, 'src/components'),
-      pages: resolve(__dirname, 'src/pages')
+      pages: resolve(__dirname, 'src/pages'),
+      constants: resolve(__dirname, 'src/constants')
     }
   }
 });
