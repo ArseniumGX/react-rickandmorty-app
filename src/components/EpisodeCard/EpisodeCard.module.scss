@@ -1,0 +1,36 @@
+@import '../../styles/variables';
+
+.container {
+  background-color: #fafafa;
+  width: 312px;
+  height: 128px;
+  border-radius: 4px;
+  box-shadow: 0 0.2rem 0.4rem #999;
+  font-family: $font-content;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.4rem;
+
+  &__name {
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: #000;
+    text-align: center;
+  }
+
+  &__air_date {
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #999;
+  }
+
+  &__episode {
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: #333;
+  }
+}
