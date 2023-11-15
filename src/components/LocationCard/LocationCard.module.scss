@@ -1,0 +1,28 @@
+@import '../../styles/variables';
+
+.container {
+  background-color: #fafafa;
+  width: 312px;
+  height: 128px;
+  border-radius: 4px;
+  box-shadow: 0 0.2rem 0.4rem #666;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-content;
+  row-gap: 0.5rem;
+  cursor: pointer;
+
+  &__name {
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #000;
+  }
+
+  &__type {
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #666;
+  }
+}
