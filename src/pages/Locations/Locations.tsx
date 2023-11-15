@@ -4,7 +4,6 @@ import { LOCATIONS } from 'constants/Locations.query';
 import { LocationCard } from 'components';
 import { Filters } from 'datatypes/Filters';
 import { LocationsData } from 'datatypes/Locations';
-import { LocationData } from 'datatypes/Location';
 
 export function Locations() {
   const [filter, setFilter] = useState<Filters>({});
@@ -22,13 +21,9 @@ export function Locations() {
       {/* TODO Filter */}
       {/* FIX locaontine */}
       <ul>
-        {data?.locations.results.map((location: LocationData) => (
-          <li key={location.id}>
-            <LocationCard
-              id={location.id}
-              name={location.name}
-              type={location.type}
-            />
+        {data?.locations.results.map(({ id, name, type }) => (
+          <li key={id}>
+            <LocationCard id={id} name={name} type={type} />
           </li>
         ))}
       </ul>

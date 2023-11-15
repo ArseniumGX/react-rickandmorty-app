@@ -4,6 +4,10 @@ import { LocationData } from './Location';
 export type LocationsData = {
   locations: {
     info: Info;
-    results: LocationData[];
+    results: {
+      id: number;
+      name: string;
+      type: string;
+    }[];
   };
 };
