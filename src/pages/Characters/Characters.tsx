@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { useQuery } from '@apollo/client';
-import styles from './Characters.module.scss';
-import banner from '../../assets/Logo.svg';
 import { QUERY } from 'constants/Characters.query';
 import { CharacterCard } from 'components/CharacterCard/CharacterCard';
+import { CharactersData } from 'datatypes/Characters';
+import { Filters } from 'datatypes/Filters';
 
 export function Characters() {
-  const [filter, _] = useState<string>('');
+  const [filter, setFilter] = useState<Filters>({});
 
-  const { loading, error, data } = useQuery(QUERY, {
-    variables: { gender: filter }
+  const { loading, error, data } = useQuery<CharactersData>(QUERY, {
+    variables: filter
   });
 
   if (loading) return <h2>Carregado...</h2>;
@@ -23,13 +23,13 @@ export function Characters() {
       {/* TODO */}
       {/* <div className="styles.characters_container__filters"></div> */}
       <ul className="styles.container__characters">
-        {data.characters.results.map((info: any) => (
-          <li key={info.id} className="styles.container__characters__card">
+        {data?.characters.results.map(({ id, name, species, image }) => (
+          <li key={id} className="styles.container__characters__card">
             <CharacterCard
-              id={info.id}
-              image={info.image}
-              name={info.name}
-              species={info.species}
+              id={id}
+              image={image}
+              name={name}
+              species={species}
             />
           </li>
         ))}
