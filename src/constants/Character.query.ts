@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
 export const CHARACTER = gql`
-  query Character($id: ID) {
+  query Character($id: ID!) {
     character(id: $id) {
       id
       name

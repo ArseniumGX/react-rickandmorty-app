@@ -1,5 +1,4 @@
-import { Characters, Locations } from 'pages';
-import { Episodes } from 'pages/Episodes/Episodes';
+import { Characters, Locations, Episodes, Character } from 'pages';
 import { Route, Routes } from 'react-router-dom';
 
 export function Router() {
@@ -8,6 +7,7 @@ export function Router() {
       <Route index element={<Characters />} />
       <Route path="locations" element={<Locations />} />
       <Route path="episodes" element={<Episodes />} />
+      <Route path="character/:characterId" element={<Character />} />
       <Route path="*" element={<>NOTFOUND</>} />
     </Routes>
   );

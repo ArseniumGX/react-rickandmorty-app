@@ -1,0 +1,9 @@
+@use 'sass:math';
+
+@function toRem($value) {
+  @if unit($value) == px {
+    @return math.div($value, 16px) * 1rem;
+  } @else {
+    @return math.div($value, 16) * 1rem;
+  }
+}

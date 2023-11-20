@@ -1,0 +1,70 @@
+@import '../../styles/variables';
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 52px;
+  font-family: $font-content;
+}
+
+.header {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 16px;
+
+  &__image {
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+    border: 4px solid #f2f2f7;
+    justify-content: center;
+    background-image: var(--backgroundImage);
+    background-size: 100%;
+    background-position: center;
+  }
+
+  &__name {
+    font-family: $font-content;
+    font-size: toRem(32px);
+    color: #0b1f32;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+.episodes {
+  fieldset {
+    padding-top: 20px;
+    legend {
+      color: #8e8e93;
+      font-size: toRem(20px);
+      line-height: 24px;
+      letter-spacing: toRem(0.15px);
+      font-weight: 500;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: column nowrap;
+
+    li {
+      width: 312px;
+      height: 88px;
+      padding-left: toRem(16px);
+      display: flex;
+      flex-flow: column nowrap;
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: #eaeaea;
+        display: flex;
+        margin: 9px auto;
+      }
+    }
+  }
+}

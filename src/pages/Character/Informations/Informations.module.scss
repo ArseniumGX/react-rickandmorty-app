@@ -1,0 +1,48 @@
+@import '../../../styles/variables';
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: $font-content;
+}
+
+.informations {
+  padding-top: 20px;
+  legend {
+    color: #8e8e93;
+    font-size: toRem(20px);
+  }
+
+  &__data {
+    width: 312px;
+    height: 64px;
+    padding-left: toRem(16px);
+    display: flex;
+    flex-flow: column nowrap;
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: #eaeaea;
+      display: flex;
+      margin: 9px auto;
+    }
+
+    h4 {
+      font-size: toRem(16px);
+      font-weight: 700;
+      color: #000;
+      letter-spacing: toRem(0.15px);
+      line-height: 24px;
+    }
+
+    span {
+      font-size: toRem(14px);
+      font-weight: 400;
+      color: #6e798c;
+      letter-spacing: toRem(0.25px);
+      line-height: 20px;
+    }
+  }
+}

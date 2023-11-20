@@ -4,6 +4,8 @@ import { QUERY } from 'constants/Characters.query';
 import { CharacterCard } from 'components/CharacterCard/CharacterCard';
 import { CharactersData } from 'datatypes/Characters';
 import { Filters } from 'datatypes/Filters';
+import { Link } from 'react-router-dom';
+import './Characters.module.scss';
 
 export function Characters() {
   const [filter, setFilter] = useState<Filters>({});
@@ -25,12 +27,14 @@ export function Characters() {
       <ul className="styles.container__characters">
         {data?.characters.results.map(({ id, name, species, image }) => (
           <li key={id} className="styles.container__characters__card">
-            <CharacterCard
-              id={id}
-              image={image}
-              name={name}
-              species={species}
-            />
+            <Link to={`character/${id}`}>
+              <CharacterCard
+                id={id}
+                image={image}
+                name={name}
+                species={species}
+              />
+            </Link>
           </li>
         ))}
       </ul>
