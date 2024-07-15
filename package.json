@@ -17,7 +17,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
     "react-router-dom": "^6.18.0",
-    "sass": "^1.69.1"
+    "sass": "^1.77.8"
   },
   "devDependencies": {
     "@types/node": "^20.9.0",
